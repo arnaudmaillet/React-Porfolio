@@ -1,9 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
+import Style from "./Page.module.scss"
 
 const Fiche = () => {
      return(
-        <div>
+        <div className={Style.page}>
             <Navbar />
             Fiche
         </div>

@@ -1,0 +1,25 @@
+.nav {
+    height: 50px;
+    width: 100%;
+    display: flex;
+
+    .ul {
+        width: 50%;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        justify-content: space-evenly;
+        list-style-type: none;
+        display: flex;
+        
+        .li {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.5rem;
+            // color: white;
+        }
+
+        .navActive {
+            color: orangered!important;
+        }
+    }
+}
