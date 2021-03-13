@@ -9,8 +9,8 @@ const Navbar = () => {
                 <NavLink to="/" exact className="hover text-white" activeClassName={Style.navActive}>
                     <li className={Style.li}>Accueil</li>
                 </NavLink>
-                <NavLink to="/fiche" exact className="hover text-white" activeClassName={Style.navActive}>
-                    <li className={Style.li}>Fiche</li>
+                <NavLink to="/profil" exact className="hover text-white" activeClassName={Style.navActive}>
+                    <li className={Style.li}>Profil</li>
                 </NavLink>
                 <NavLink to="/projets" exact className="hover text-white" activeClassName={Style.navActive}>
                     <li className={Style.li}>Projets</li>

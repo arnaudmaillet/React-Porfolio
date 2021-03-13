@@ -1,8 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar.js";
+// import Navbar from "../components/Navbar/Navbar.js";
 import Style from "./Page.module.scss";
-import ResSociaux from "../components/ResSociaux/ResSociaux.js"
+
 import TitreH1 from "../components/TitreH1/TitreH1.js"
+import ResSociaux from "../components/ResSociaux/ResSociaux.js"
+import CardsMenu from "../components/CardsMenu/CardsMenu.js"
+
 
 const Accueil = () => {
      return(
@@ -10,8 +13,10 @@ const Accueil = () => {
             <div className={Style.page}>
                 {/* <Navbar /> */}
                 <TitreH1 />
-                <ResSociaux />
                 <div className={Style.ligne}></div>
+                <CardsMenu />
+                <ResSociaux />
+
             </div>
             <div style={{height: "1000px"}}>
 

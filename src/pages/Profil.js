@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Style from "./Page.module.scss"
 
-const Fiche = () => {
+const Profil = () => {
      return(
         <div className={Style.page}>
             <Navbar />
@@ -11,4 +11,4 @@ const Fiche = () => {
     );
 };
 
-export default Fiche;
+export default Profil;
