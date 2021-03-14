@@ -1,16 +1,61 @@
-.menu{
+.cards{
     position: absolute;
     bottom: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
 
-    .cards{
+    > div{
         width: 100%;
         max-width: 1500px;
         margin: 0 15% 0 15%;
         perspective: 800px;
         display: flex;
         justify-content: space-between;
+
+
+        .menu{
+            height: 300px;
+            width: 200px;
+            transform: translateY(50px) translateX(-10px);
+
+            .texte{
+                position: absolute;
+                width: 200px;
+                opacity: 1;
+                top: 70%;
+                left: 40%;
+                transition: 0.5s;
+            }
+
+            .sous_menu{
+                position: absolute;
+                opacity: 0;
+                top: 40%;
+                transition: 0.5s;
+
+                > div{
+                    transition: 0.5s;
+
+                    &:hover{
+                        color: orange;
+                    }
+                }
+            }
+
+            &:hover{
+                .texte{
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+    
+                .sous_menu{
+                    opacity: 1;
+                    transform: translateX(50px);
+                }
+            }
+        }
     }
+
 }
+

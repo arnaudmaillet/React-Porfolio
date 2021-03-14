@@ -18,6 +18,7 @@ const CardAccueil = (props) => {
         <div className={Style._3d}>
             <div className={Style._3d_card} style={{background: `url(`+ props.background +`)`, backgroundSize: "cover", backgroundPosition: "center"}}>
                 <h2>{props.children}</h2>
+                <h2>{props.lol}</h2>
             </div>
         </div>
     );
