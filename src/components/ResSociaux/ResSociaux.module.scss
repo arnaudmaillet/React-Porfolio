@@ -4,35 +4,10 @@
     width: 50px;
     display: flex;
     flex-direction: row-reverse;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
 
     div{
         display: flex;
         flex-direction: column;
-
-        a {
-            margin: auto;
-            text-decoration: none;
-
-            
-            div{
-                display: flex;
-                margin: 2rem 0 2rem 0;
-                
-                i{
-                    font-size: 40px;
-                    color: white;
-                    transition: all 0.2s;
-                }
-
-                i:hover{
-                    z-index: 2;
-                    box-shadow: 0px 0px 150px red;
-                    transform: scale(1.5);
-                }
-            }
-        }
-    
     }
 }
