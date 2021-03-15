@@ -27,7 +27,7 @@ const CardsMenu = () => {
                 <NavLink to="/stages">
                     <CardAccueil background={img3}>
                         <div className={Style.menu}>
-                            <div className={Style.texte}>Formation & <br/> Compétences</div>
+                            <div className={Style.texte}>Formations & <br/> Compétences</div>
                             <div className={Style.sous_menu}>
                                 <div>Formations</div>
                                 <div>Competences</div>

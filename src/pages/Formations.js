@@ -2,13 +2,13 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Style from "./Page.module.scss"
 
-const Stages = () => {
+const Formations = () => {
      return(
         <div className={Style.page}>
             <Navbar />
-            Stages
+            Formations
         </div>
     );
 };
 
-export default Stages;
+export default Formations;

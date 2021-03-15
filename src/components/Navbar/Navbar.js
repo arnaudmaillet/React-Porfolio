@@ -4,23 +4,23 @@ import Style from './Navbar.module.scss';
 
 const Navbar = () => {
      return(
-        <div className={Style.nav}>
-            <ul className={Style.ul}>
-                <NavLink to="/" exact className="hover text-white" activeClassName={Style.navActive}>
-                    <li className={Style.li}>Accueil</li>
-                </NavLink>
-                <NavLink to="/profil" exact className="hover text-white" activeClassName={Style.navActive}>
-                    <li className={Style.li}>Profil</li>
-                </NavLink>
-                <NavLink to="/projets" exact className="hover text-white" activeClassName={Style.navActive}>
-                    <li className={Style.li}>Projets</li>
-                </NavLink>
-                <NavLink to="/stages" exact className="hover text-white" activeClassName={Style.navActive}>
-                    <li className={Style.li}>Stages</li>
-                </NavLink>
+        <div className={Style.navbar}>
+            <ul className={Style.navbar_nav}>
+                <NavItems lien="/">Accueil</NavItems>
+                <NavItems lien="/profil">Profil</NavItems>
+                <NavItems lien="/formations">Formations</NavItems>
+                <NavItems lien="/projets">Projets</NavItems>
             </ul>
         </div>
     );
 };
+
+const NavItems = (props) =>{
+    return(
+        <NavLink to={props.lien} exact className="hover text-white" activeClassName={Style.navActive}>
+            <li className={Style.li}>{props.children}</li>
+        </NavLink>
+    )
+}
 
 export default Navbar;
