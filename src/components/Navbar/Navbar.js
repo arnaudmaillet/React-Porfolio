@@ -17,9 +17,13 @@ const Navbar = () => {
 
 const NavItems = (props) =>{
     return(
-        <NavLink to={props.lien} exact className="hover text-white" activeClassName={Style.navActive}>
-            <li className={Style.li}>{props.children}</li>
-        </NavLink>
+        <div className={Style.nav_item}>    
+            <li className={Style.item}>
+                <NavLink to={props.lien} exact className="hover text-white" activeClassName={Style.navActive}>
+                    {props.children}
+                </NavLink>
+            </li>
+        </div>
     )
 }
 
