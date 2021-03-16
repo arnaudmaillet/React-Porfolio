@@ -12,53 +12,59 @@ const CardsMenu = () => {
      return(
         <div className={Style.cards}>
             <div>
-                <NavLink to="/profil" exact>
-                    <CardAccueil background={img1}>
-                        <div className={Style.menu}>
-                            <div className={Style.texte}>Mon profil</div>
-                            <div className={Style.sous_menu}>
+                <CardAccueil background={img1}>
+                    <div className={Style.menu}>
+                        <div className={Style.texte}>Mon profil</div>
+                        <div className={Style.sous_menu}>
+                            <NavLink to="/profil" exact style={{textDecoration: 'none'}}>
                                 <div>Profil</div>
+                            </NavLink>
                                 <div>CV</div>
                                 <div>Parcours</div>
-                            </div>
+
                         </div>
-                    </CardAccueil>
-                </NavLink>
-                <NavLink to="/stages">
-                    <CardAccueil background={img3}>
-                        <div className={Style.menu}>
-                            <div className={Style.texte}>Formations & <br/> Compétences</div>
-                            <div className={Style.sous_menu}>
+                    </div>
+                </CardAccueil>
+
+                <CardAccueil background={img3}>
+                    <div className={Style.menu}>
+                        <div className={Style.texte}>Formations & <br/> Compétences</div>
+                        <div className={Style.sous_menu}>
+                            <NavLink to="/formations" style={{textDecoration: 'none'}}>
                                 <div>Formations</div>
+                            </NavLink>
                                 <div>Competences</div>
                                 <div>Stages</div>
-                            </div>
-                        </div>
-                    </CardAccueil>
-                </NavLink>
-                <NavLink to="/projets" exact>
-                    <CardAccueil background={img2}>
-                        <div className={Style.menu}>
-                            <div className={Style.texte}>Projets & <br/> Veilles</div>
-                            <div className={Style.sous_menu}>
+                        </div>                           
+                    </div>
+                </CardAccueil>
+
+
+                <CardAccueil background={img2}>
+                    <div className={Style.menu}>
+                        <div className={Style.texte}>Projets & <br/> Veilles</div>
+                        <div className={Style.sous_menu}>
+                            <NavLink to="/projets" exact style={{textDecoration: 'none'}}>
                                 <div>Projets</div>
+                            </NavLink>
                                 <div>Veilles</div>
                                 <div>TDs & TPs</div>
-                            </div>
+
                         </div>
-                    </CardAccueil>
-                </NavLink>
-                <NavLink to="/fiche">
-                    <CardAccueil background={img4}>
-                        <div className={Style.menu}>
-                            <div className={Style.texte}>Autre</div>
-                            <div className={Style.sous_menu}>
+                    </div>
+                </CardAccueil>
+
+                <CardAccueil background={img4}>
+                    <div className={Style.menu}>
+                        <div className={Style.texte}>Autre</div>
+                        <div className={Style.sous_menu}>
+                            <NavLink to="/fiche" exact style={{textDecoration: 'none'}}>
                                 <div>Le BTS SIO</div>
+                            </NavLink>
                                 <div>Materiel info</div>
-                            </div>
                         </div>
-                    </CardAccueil>
-                </NavLink>
+                    </div>
+                </CardAccueil>
             </div>
         </div>        
     );
