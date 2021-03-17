@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { CSSTransition } from 'react-transition-group'
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.scss'
 import './Navbar.css'
 
@@ -21,7 +21,9 @@ const Navbar = () => {
                 <NavItems content="Menu">
                     <DropdownMenu></DropdownMenu>
                 </NavItems>
-                <NavItems content="Social"></NavItems>
+                <NavItems content="Social">
+                    <DropdownSocial></DropdownSocial>
+                </NavItems>
                 <NavItems content={<DarkMod/>}></NavItems>
             </ul>
         </div>
@@ -71,29 +73,41 @@ const DropdownMenu = () =>{
                 onEnter={calcHeight}
                 >
                 <div className="menu">
-                    <DropdownItem leftIcon={<Home/>}>
-                        Accueil
-                    </DropdownItem>
+                    <NavLink to="/" exact  style={{textDecoration: "none"}}>
+                        <DropdownItem leftIcon={<Home/>}>
+                            <div>Accueil</div>
+                        </DropdownItem>
+                    </NavLink>
                     <DropdownItem 
                         leftIcon={<Profil/>}
-                        goToMenu="accueil"
+                        goToMenu="profil"
                         >
                         Mon Profil
                     </DropdownItem>
-                    <DropdownItem leftIcon={<Skill/>}>
+                    <DropdownItem 
+                        leftIcon={<Skill/>}
+                        goToMenu="formations"
+                        >
                         Formations
                     </DropdownItem>                  
-                    <DropdownItem leftIcon={<Work/>}>
+                    <DropdownItem 
+                        leftIcon={<Work/>}
+                        goToMenu="projets"
+                        >
                         Projets
                     </DropdownItem>
-                    <DropdownItem leftIcon={<Other/>}>
+                    <DropdownItem 
+                        leftIcon={<Other/>}
+                        goToMenu="Autre"
+                        >
                         Autres
                     </DropdownItem>
                 </div>
             </CSSTransition>
 
+
             <CSSTransition    
-                in={activeMenu === 'accueil'} 
+                in={activeMenu === 'profil'} 
                 unmountOnExit 
                 timeout={500}
                 classNames="menu-secondary"
@@ -107,10 +121,6 @@ const DropdownMenu = () =>{
                     </DropdownItem>
                     <DropdownItem 
                         leftIcon={<RightArrow/>}
-                        >Profil
-                    </DropdownItem>
-                    <DropdownItem 
-                        leftIcon={<RightArrow/>}
                         >CV
                     </DropdownItem>
                     <DropdownItem 
@@ -119,8 +129,120 @@ const DropdownMenu = () =>{
                     </DropdownItem>
                 </div>
             </CSSTransition>
+
+
+            <CSSTransition    
+                in={activeMenu === 'formations'} 
+                unmountOnExit 
+                timeout={500}
+                classNames="menu-secondary"
+                onEnter={calcHeight}
+                >
+                <div className="menu">
+                    <DropdownItem 
+                        leftIcon={<LeftArrow/>}
+                        goToMenu="main"
+                        >
+                    </DropdownItem>
+                    <NavLink to="/formations" exact  style={{textDecoration: "none"}}>
+                        <DropdownItem 
+                            leftIcon={<RightArrow/>}
+                            >Formations
+                        </DropdownItem>
+                    </NavLink>
+                    <DropdownItem 
+                        leftIcon={<RightArrow/>}
+                        >Competences
+                    </DropdownItem>
+                    <DropdownItem 
+                        leftIcon={<RightArrow/>}
+                        >Stages
+                    </DropdownItem>
+                </div>
+            </CSSTransition>
+
+
+            <CSSTransition    
+                in={activeMenu === 'projets'} 
+                unmountOnExit 
+                timeout={500}
+                classNames="menu-secondary"
+                onEnter={calcHeight}
+                >
+                <div className="menu">
+                    <DropdownItem 
+                        leftIcon={<LeftArrow/>}
+                        goToMenu="main"
+                        >
+                    </DropdownItem>
+                    <NavLink to="/projets" exact  style={{textDecoration: "none"}}>
+                        <DropdownItem 
+                            leftIcon={<RightArrow/>}
+                            >Projets
+                        </DropdownItem>
+                    </NavLink>
+                    <DropdownItem 
+                        leftIcon={<RightArrow/>}
+                        >Veille
+                    </DropdownItem>
+                    <DropdownItem 
+                        leftIcon={<RightArrow/>}
+                        >TP
+                    </DropdownItem>
+                    <DropdownItem 
+                        leftIcon={<RightArrow/>}
+                        >TD
+                    </DropdownItem>
+                </div>
+            </CSSTransition>
+
+
+            <CSSTransition    
+                in={activeMenu === 'Autre'} 
+                unmountOnExit 
+                timeout={500}
+                classNames="menu-secondary"
+                onEnter={calcHeight}
+                >
+                <div className="menu">
+                    <DropdownItem 
+                        leftIcon={<LeftArrow/>}
+                        goToMenu="main"
+                        >
+                    </DropdownItem>
+                </div>
+            </CSSTransition>
         </div>
     )
 }
 
+const DropdownSocial = () =>{
+    const [activeMenu, setActiveMenu] =  useState('main');
+    const [menuHeight, setMenuHeight] = useState(null);
+
+    function calcHeight(el) {
+        const height = el.offsetHeight + 30;
+        setMenuHeight(height);
+      }
+
+    const DropdownItem = (props) => {
+        return(
+            <div className="menu_item">
+                <span className="icon_left">{props.leftIcon}</span>
+                {props.children}
+                <span className="right">{props.rightIcon}</span>
+            </div>
+        )
+    }
+
+    return (
+        <div>AAAA</div>
+    )
+}
+
 export default Navbar;
+
+
+
+
+

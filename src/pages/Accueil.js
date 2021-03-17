@@ -16,7 +16,6 @@ const Accueil = () => {
                 <div className={Style.ligne}></div>
                 <CardsMenu />
                 <ResSociaux />
-
             </div>
             <div style={{height: "1000px"}}>
 

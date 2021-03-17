@@ -8,12 +8,14 @@ import Formations from './pages/Formations.js';
 
 const App = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={Accueil} />
-      <Route exact path="/profil" component={Profil} />
-      <Route exact path="/formations" component={Formations} />
-      <Route exact path="/projets" component={Projets} />
-    </Switch>
+    <div>
+      <Switch>
+        <Route exact path="/" component={Accueil} />
+        <Route exact path="/profil" component={Profil} />
+        <Route exact path="/formations" component={Formations} />
+        <Route exact path="/projets" component={Projets} />
+      </Switch>
+    </div>
   );
 }
 
