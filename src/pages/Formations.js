@@ -6,7 +6,7 @@ const Formations = () => {
      return(
         <div className={Style.page}>
             <Navbar />
-            Formations
+            <div style={{color: "white", fontSize: "5rem"}}>Formations</div>
         </div>
     );
 };

@@ -6,7 +6,7 @@ const Profil = () => {
      return(
         <div className={Style.page}>
             <Navbar />
-            Fiche
+            <div style={{color: "white", fontSize: "5rem"}}>Profil</div>
         </div>
     );
 };

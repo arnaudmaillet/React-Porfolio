@@ -12,9 +12,12 @@ import { ReactComponent as Work} from '../../assets/svg/laptop-code-solid.svg'
 import { ReactComponent as Other} from '../../assets/svg/bitcoin-brands.svg'
 import { ReactComponent as LeftArrow} from '../../assets/svg/chevron-left-solid.svg'
 import { ReactComponent as RightArrow} from '../../assets/svg/long-arrow-alt-right-solid.svg'
+import { ReactComponent as Facebook} from '../../assets/svg/facebook-square-brands.svg'
+import { ReactComponent as Twitter} from '../../assets/svg/twitter-square-brands.svg'
+import { ReactComponent as Linkedin} from '../../assets/svg/linkedin-brands.svg'
+import { ReactComponent as Github} from '../../assets/svg/github-square-brands.svg'
 
 const Navbar = () => {
-
      return(
         <div className="navbar">
             <ul className="navbar_nav">
@@ -119,6 +122,13 @@ const DropdownMenu = () =>{
                         goToMenu="main"
                         >
                     </DropdownItem>
+                    <NavLink to="/profil" exact  style={{textDecoration: "none"}}>
+                        <DropdownItem 
+                            leftIcon={<RightArrow/>}
+                            goToMenu="profil"
+                            >Profil
+                        </DropdownItem>
+                    </NavLink>
                     <DropdownItem 
                         leftIcon={<RightArrow/>}
                         >CV
@@ -217,18 +227,11 @@ const DropdownMenu = () =>{
 }
 
 const DropdownSocial = () =>{
-    const [activeMenu, setActiveMenu] =  useState('main');
-    const [menuHeight, setMenuHeight] = useState(null);
-
-    function calcHeight(el) {
-        const height = el.offsetHeight + 30;
-        setMenuHeight(height);
-      }
 
     const DropdownItem = (props) => {
         return(
             <div className="menu_item">
-                <span className="icon_left">{props.leftIcon}</span>
+                <span className="icon_left2">{props.leftIcon}</span>
                 {props.children}
                 <span className="right">{props.rightIcon}</span>
             </div>
@@ -236,7 +239,38 @@ const DropdownSocial = () =>{
     }
 
     return (
-        <div>AAAA</div>
+        <div className="dropdown">
+            <div className="menu">
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+                    <DropdownItem 
+                        leftIcon={<Facebook/>}
+                        >
+                        Facebook
+                    </DropdownItem>
+                </a>
+                <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+                    <DropdownItem 
+                        leftIcon={<Twitter/>}
+                        >
+                        Twitter
+                    </DropdownItem>
+                </a>
+                <a href="https://fr.linkedin.com/" target="_blank" rel="noreferrer">
+                    <DropdownItem 
+                        leftIcon={<Linkedin/>}
+                        >
+                        Linkedin
+                    </DropdownItem>
+                </a>
+                <a href="https://github.com/arnaudmaillet" target="_blank" rel="noreferrer">
+                    <DropdownItem 
+                        leftIcon={<Github/>}
+                        >
+                        Github
+                    </DropdownItem>
+                </a>
+            </div>
+        </div>
     )
 }
 

@@ -6,7 +6,7 @@ const Projets = () => {
      return(
         <div className={Style.page}>
             <Navbar />
-            Projets
+            <div style={{color: "white", fontSize: "5rem"}}>Projets</div>
         </div>
     );
 };
