@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.scss'
 import './Navbar.css'
 
-import { ReactComponent as DarkMod} from '../../assets/svg/adjust-solid.svg'
+// import { ReactComponent as DarkMod} from '../../assets/svg/adjust-solid.svg'
 import { ReactComponent as Home} from '../../assets/svg/home-solid.svg'
 import { ReactComponent as Profil} from '../../assets/svg/user-circle-regular.svg'
 import { ReactComponent as Skill} from '../../assets/svg/graduation-cap-solid.svg'
@@ -17,24 +17,34 @@ import { ReactComponent as Twitter} from '../../assets/svg/twitter-square-brands
 import { ReactComponent as Linkedin} from '../../assets/svg/linkedin-brands.svg'
 import { ReactComponent as Github} from '../../assets/svg/github-square-brands.svg'
 
+
+
 const Navbar = () => {
+
      return(
         <div className="navbar">
             <ul className="navbar_nav">
                 <NavItems content="Menu">
                     <DropdownMenu></DropdownMenu>
                 </NavItems>
-                <NavItems content="Social">
-                    <DropdownSocial></DropdownSocial>
-                </NavItems>
-                <NavItems content={<DarkMod/>}></NavItems>
+                <ResSocial route="https://www.facebook.com/">{<Facebook/>}</ResSocial>
+                <ResSocial route="https://twitter.com/">{<Twitter/>}</ResSocial>
+                <ResSocial route="https://fr.linkedin.com/">{<Linkedin/>}</ResSocial>
+                <ResSocial route="https://github.com/arnaudmaillet">{<Github/>}</ResSocial>
             </ul>
         </div>
     );
 };
 
-const NavItems = (props) =>{
+const ResSocial = (props) =>{
+    return(
+        <a href={props.route} target="_blank" rel="noreferrer">
+            {props.children}
+        </a>
+    )
+}
 
+const NavItems = (props) =>{
     const [open, setOpen] = useState(false);
 
     return(
@@ -222,54 +232,6 @@ const DropdownMenu = () =>{
                     </DropdownItem>
                 </div>
             </CSSTransition>
-        </div>
-    )
-}
-
-const DropdownSocial = () =>{
-
-    const DropdownItem = (props) => {
-        return(
-            <div className="menu_item">
-                <span className="icon_left2">{props.leftIcon}</span>
-                {props.children}
-                <span className="right">{props.rightIcon}</span>
-            </div>
-        )
-    }
-
-    return (
-        <div className="dropdown">
-            <div className="menu">
-                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-                    <DropdownItem 
-                        leftIcon={<Facebook/>}
-                        >
-                        Facebook
-                    </DropdownItem>
-                </a>
-                <a href="https://twitter.com/" target="_blank" rel="noreferrer">
-                    <DropdownItem 
-                        leftIcon={<Twitter/>}
-                        >
-                        Twitter
-                    </DropdownItem>
-                </a>
-                <a href="https://fr.linkedin.com/" target="_blank" rel="noreferrer">
-                    <DropdownItem 
-                        leftIcon={<Linkedin/>}
-                        >
-                        Linkedin
-                    </DropdownItem>
-                </a>
-                <a href="https://github.com/arnaudmaillet" target="_blank" rel="noreferrer">
-                    <DropdownItem 
-                        leftIcon={<Github/>}
-                        >
-                        Github
-                    </DropdownItem>
-                </a>
-            </div>
         </div>
     )
 }

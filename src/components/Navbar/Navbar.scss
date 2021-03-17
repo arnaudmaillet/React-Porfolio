@@ -22,9 +22,26 @@ $item: 1.4;
         display: flex;
         justify-content: flex-end;
 
+         > a{
+            height: $nav-size;
+            width: 30px;
+            margin: 0 8px 0 8px;
+            color: $text-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+
+            &:hover{
+                filter: brightness(1.2);
+                transform: scale(1.2);
+            }
+        }
+
         .nav_item{
             width: calc(#{$nav-size} * #{$item});
             display: flex;
+            margin-right: 20px;
         
             .item_content {
                 margin: auto;
