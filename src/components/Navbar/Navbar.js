@@ -24,6 +24,7 @@ const Navbar = () => {
      return(
         <div className="navbar">
             <ul className="navbar_nav">
+                <div style={{color: "white"}}></div>
                 <NavItems content="Menu">
                     <DropdownMenu></DropdownMenu>
                 </NavItems>

@@ -1,14 +1,29 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar";
-import Style from "./Page.module.scss"
+import Navbar from "../components/Navbar/Navbar.js";
+import Footer from '../components/Footer/Footer.js'
+import "./Profil.scss"
+
+import { ReactComponent as IconeProfil} from '../assets/svg/user-circle-regular.svg'
 
 const Profil = () => {
      return(
-        <div className={Style.page}>
+        <div className="page">
             <Navbar />
-            <div style={{color: "white", fontSize: "5rem"}}>Profil</div>
+            <div className="container">
+                <TitreProfil/>
+            </div>
+            <Footer/>
         </div>
     );
 };
+
+const TitreProfil = () =>{
+    return(
+        <div className="titre_container">
+            <div className="titre">Mon Profil</div>
+            <div className="icone"><IconeProfil/></div>
+        </div>
+    )
+}
 
 export default Profil;

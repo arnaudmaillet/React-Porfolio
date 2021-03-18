@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-import Style from "./Page.module.scss"
+import Style from "./Formations.scss"
 
 const Formations = () => {
      return(
         <div className={Style.page}>
             <Navbar />
-            <div style={{color: "white", fontSize: "5rem"}}>Formations</div>
+            <div style={{fontSize: "5rem"}}>Formations</div>
         </div>
     );
 };

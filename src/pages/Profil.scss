@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+
+$bg: #242526;
+$bg-accent: #484a4d;
+$text-color: #dadce1;
+$border: 4px solid #474a4d;
+
+.page{
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .titre_container{
+        height: 150px;
+        width: 100%;
+        display: flex;
+        margin-top: 5rem;
+        font-size: 5rem;
+        border-radius: 5px;
+        font-family: 'Megrim', cursive;
+        font-weight: 800;
+        text-transform: uppercase;
+        border: $border;
+        color: $text-color;
+        background-color: $bg;
+        display: flex;
+
+        .titre{
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 80%;
+        }
+
+        .icone{
+            height: 100%;
+            width: 20%;
+            padding: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
