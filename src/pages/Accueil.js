@@ -15,7 +15,6 @@ const Accueil = () => {
             <div className={Style.page}>
                 {/* <Navbar /> */}
                 <TitreH1 />
-                <div className={Style.ligne}></div>
                 <CardsMenu />
                 <ResSociaux />
             </div>

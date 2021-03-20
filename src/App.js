@@ -2,7 +2,7 @@ import './App.scss';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Accueil from './pages/Accueil.js';
-import Profil from './pages/Profil.js';
+import Profil from './pages/Profil/Profil.js';
 import Projets from './pages/Projets.js';
 import Formations from './pages/Formations.js';
 

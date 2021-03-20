@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar.js";
-import Footer from '../components/Footer/Footer.js'
+import Navbar from "../../components/Navbar/Navbar.js";
+import Footer from '../../components/Footer/Footer.js'
 import "./Profil.scss"
 
-import { ReactComponent as IconeProfil} from '../assets/svg/user-circle-regular.svg'
+import { ReactComponent as IconeProfil} from '../../assets/svg/user-circle-regular.svg'
 
 const Profil = () => {
      return(

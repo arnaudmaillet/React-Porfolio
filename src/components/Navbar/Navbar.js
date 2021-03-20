@@ -48,6 +48,8 @@ const ResSocial = (props) =>{
 const NavItems = (props) =>{
     const [open, setOpen] = useState(false);
 
+    console.log(open);
+
     return(
         <div className="nav_item">    
             <li className="item_content" onClick={() => setOpen(!open)}>
