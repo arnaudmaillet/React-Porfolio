@@ -13,38 +13,26 @@ $border: 4px solid #474a4d;
     background-repeat: no-repeat;
     background-size: cover;
 
-    .titre_container{
-        height: 150px;
-        width: 100%;
-        display: flex;
-        margin-top: 5rem;
-        display: flex;
+    .container{
+        height: 100%;
 
-        .titre{
-            margin-top: auto;
-            margin-bottom: auto;
-            width: 80%;
-            font-size: 5rem;
-            border-radius: 5px;
-            font-family: 'Megrim', cursive;
-            font-weight: 800;
-            text-transform: uppercase;
-
-            &:after{
-                content: "";
-                height: 10%;
-                width: 100%;
-                background-color: red;
-            }
+        .titre_haut{
+            margin-top: 100px;
         }
 
-        .icone{
-            height: 100%;
-            width: 20%;
-            padding: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .titre_bas{
+            margin-left: 300px;
+        }
+
+        .presentation{
+            margin-top: 100px;
+            width: 100%;
+            line-height: 30px;
+
+            &_txt{
+                height: auto;
+                width: 60%;
+            }
         }
     }
 }
