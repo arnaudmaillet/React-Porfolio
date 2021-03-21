@@ -7,6 +7,21 @@ $border-radius: 8px;
 $speed: 0.5s;
 $item: 1.4;
 
+.facebook:hover{
+    color: #4267B2!important;
+}
+
+.twitter:hover{
+    color: #1DA1F2!important
+}
+
+.linkedin:hover{
+    color: #0e76a8!important;
+}
+
+.github:hover{
+    color: #6cc644!important;
+}
 
 .navbar {
     height: $nav-size;
@@ -26,12 +41,11 @@ $item: 1.4;
             height: $nav-size;
             width: 30px;
             margin: 0 8px 0 8px;
-            color: $text-color;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.5s;
-
+            transition: 300ms;
 
             &:hover{
                 filter: brightness(1.2);
@@ -104,7 +118,7 @@ $item: 1.4;
                     padding: 0.5rem;
                     color: $text-color;
                     cursor: pointer;
-                    transition: 0.5s;
+                    transition: 300ms;
             
             
                     &:hover{
@@ -147,5 +161,3 @@ $item: 1.4;
         }
     }
 }
-
-

@@ -9,7 +9,6 @@ const TitreH1 = () => {
                 <div>d'un Developpeur</div>
 
             </div>
-            {/* <div className="ligne"></div> */}
          </div>
 
     );

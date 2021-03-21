@@ -28,10 +28,10 @@ const Navbar = () => {
                 <NavItems content="Menu">
                     <DropdownMenu></DropdownMenu>
                 </NavItems>
-                <ResSocial route="https://www.facebook.com/">{<Facebook/>}</ResSocial>
-                <ResSocial route="https://twitter.com/">{<Twitter/>}</ResSocial>
-                <ResSocial route="https://fr.linkedin.com/">{<Linkedin/>}</ResSocial>
-                <ResSocial route="https://github.com/arnaudmaillet">{<Github/>}</ResSocial>
+                <ResSocial route="https://www.facebook.com/" classe="facebook">{<Facebook/>}</ResSocial>
+                <ResSocial route="https://twitter.com/" classe="twitter">{<Twitter/>}</ResSocial>
+                <ResSocial route="https://fr.linkedin.com/" classe="linkedin">{<Linkedin/>}</ResSocial>
+                <ResSocial route="https://github.com/arnaudmaillet" classe="github">{<Github/>}</ResSocial>
             </ul>
         </div>
     );
@@ -39,7 +39,7 @@ const Navbar = () => {
 
 const ResSocial = (props) =>{
     return(
-        <a href={props.route} target="_blank" rel="noreferrer">
+        <a href={props.route} target="_blank" rel="noreferrer" className={props.classe}>
             {props.children}
         </a>
     )
