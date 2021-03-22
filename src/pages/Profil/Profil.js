@@ -24,8 +24,8 @@ const Profil = () => {
             <div className="container_profil">
                 <h2 className="titre_presentation"></h2>
                 <div className="section1">
-                    <TxtPresentation />
                     <ImgProfil image= {Img}/> 
+                    <TxtPresentation />
                 </div>
                 <h2 className="titre_coord"></h2>
                 <div className="section_coord">
@@ -41,6 +41,19 @@ const Profil = () => {
                     <div className="bgQuestion"></div>
                 </div>
             </div>
+            <div className="container_timeline">
+                <h2 className="titre_parcours"></h2>
+                <div className="section_pacours">
+                    <TimeLine date="2014" titre="AAA"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, at modi eaque quam earum dolorum sint aspernatur. Et deserunt libero earum. Omnis tempora corporis animi accusamus, enim voluptate dolores error.</TimeLine>
+                    <TimeLine date="2015" titre="AAA"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, at modi eaque quam earum dolorum sint aspernatur. Et deserunt libero earum. Omnis tempora corporis animi accusamus, enim voluptate dolores error.</TimeLine>
+                    <TimeLine date="2016" titre="AAA"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, at modi eaque quam earum dolorum sint aspernatur. Et deserunt libero earum. Omnis tempora corporis animi accusamus, enim voluptate dolores error.</TimeLine>
+                    <TimeLine date="2017" titre="AAA"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, at modi eaque quam earum dolorum sint aspernatur. Et deserunt libero earum. Omnis tempora corporis animi accusamus, enim voluptate dolores error.</TimeLine>
+                    <TimeLine date="2018" titre="AAA"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, at modi eaque quam earum dolorum sint aspernatur. Et deserunt libero earum. Omnis tempora corporis animi accusamus, enim voluptate dolores error.</TimeLine>
+                    <TimeLine date="2019" titre="AAA"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, at modi eaque quam earum dolorum sint aspernatur. Et deserunt libero earum. Omnis tempora corporis animi accusamus, enim voluptate dolores error.</TimeLine>
+                    <TimeLine date="2020" titre="AAA"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, at modi eaque quam earum dolorum sint aspernatur. Et deserunt libero earum. Omnis tempora corporis animi accusamus, enim voluptate dolores error.</TimeLine>
+                    <TimeLine date="2021" titre="AAA"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, at modi eaque quam earum dolorum sint aspernatur. Et deserunt libero earum. Omnis tempora corporis animi accusamus, enim voluptate dolores error.</TimeLine>
+                </div>
+            </div>
             <Footer/>
         </div>
     );
@@ -53,7 +66,7 @@ const TxtPresentation = () => {
                 <p>Je m'appelle Alain LeBoss, je suis né le 22/11/1914 et j'ai fait un BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers) au lycée Saint Rémi à Amiens (80) pendant la promotion 1928-1929.</p>
                 <p>Intéressé par la conception de logiciels et sites internets, j'aimerai me spécialiser et augmenter mes connaissances de codages dans ces différents domaines.</p>
             </div>
-            <button type="button" className="btn btn-outline-warning">
+            <button type="button" className="btn btn-outline-dark">
                 <p className="btn_txt">Voir mon CV</p>
                 <RightArrow style={{width: "50px"}}/>
             </button>  
@@ -108,5 +121,19 @@ const Coord = (props) =>{
     )
 }
 
+
+const TimeLine = (props) => {
+    return(
+        <div className="timeline">
+            <div className="timeline_item">
+                <p className="timeline_item_date">{props.date}</p>
+                <div className="timeline_item_content">
+                    <h2 className="timeline_item_content_titre">{props.titre}</h2>
+                    <div>{props.children}</div>
+                </div>
+            </div>
+        </div>
+    )
+}
 
 export default Profil;
