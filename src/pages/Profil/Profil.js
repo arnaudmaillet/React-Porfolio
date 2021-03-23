@@ -10,8 +10,7 @@ import Titre from "../../components/Titre/Titre.js";
 
 const Profil = () => {
      return(
-        <div className="page">
-            
+        <div className="profil">
             <Navbar />
             <div className="titre_profil">
                 <div className="titre_profil_haut">
@@ -23,14 +22,18 @@ const Profil = () => {
             </div>
             <div className="container_profil">
                 <h2 className="titre_presentation"></h2>
+                <div className="titre_presentation2">
+                    <h1>Designer, Developpeur Front-End / Back-End </h1>
+                    <p>Developpeur qui code par passion depuis 1970</p>
+                </div>
                 <div className="section1">
                     <ImgProfil image= {Img}/> 
                     <TxtPresentation />
                 </div>
-                <h2 className="titre_coord"></h2>
-                <div className="section_coord">
-                    <Coord
-                        nomPrenom="Alain LeBoss"
+                <h2 className="titre_info"></h2>
+                <div className="section_info">
+                    <Info
+                        nomPrenom="Mr A"
                         age="145"
                         natio="Belge"
                         tel="0123456789"
@@ -54,7 +57,7 @@ const Profil = () => {
                     <TimeLine date="2021" titre="AAA"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, at modi eaque quam earum dolorum sint aspernatur. Et deserunt libero earum. Omnis tempora corporis animi accusamus, enim voluptate dolores error.</TimeLine>
                 </div>
             </div>
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     );
 };
@@ -63,7 +66,7 @@ const TxtPresentation = () => {
     return (
         <div className="presentation">
             <div className="presentation_txt">
-                <p>Je m'appelle Alain LeBoss, je suis né le 22/11/1914 et j'ai fait un BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers) au lycée Saint Rémi à Amiens (80) pendant la promotion 1928-1929.</p>
+                <p>Je m'appelle MR A, je suis né le 22/11/1914 et j'ai fait un BTS SIO (Services Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers) au lycée Saint Rémi à Amiens (80) pendant la promotion 1928-1929.</p>
                 <p>Intéressé par la conception de logiciels et sites internets, j'aimerai me spécialiser et augmenter mes connaissances de codages dans ces différents domaines.</p>
             </div>
             <button type="button" className="btn btn-outline-dark">
@@ -86,9 +89,9 @@ const ImgProfil = ({image}) => {
 }
 
 
-const Coord = (props) =>{
+const Info = (props) =>{
     return(
-        <div className="coord">
+        <div className="info">
             <div className="nom">
                 <p>Nom</p>
                 <div>: {props.nomPrenom}</div>

@@ -11,21 +11,18 @@ $Medium: #707070;
 $Egg: #FFDF6C;
 $White: #FFFFFF;
 
-.page{
-    height: 100%;
-    width: 100vw;
+.profil{
+    max-width: 100%;
     padding: 0;
     margin: 0;
     background-color: $White;
     box-sizing: content-box;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
-
-
-
+    overflow-x: hidden;
 
     .titre_profil{
+        height: 650px;
         width: 100%;
         padding: 10%;
         color: $White;
@@ -59,6 +56,25 @@ $White: #FFFFFF;
         color: $Backish;
         margin: 0 auto 0 auto;
         padding: 0 10% 0 10%;
+
+        > .titre_presentation2{
+
+            > h1{
+                text-align: center;
+                color: $Darky;
+                margin-top: 200px;
+                font-size: 50px;
+                font-weight: bold;
+            }
+
+            > p{
+                text-align: center;
+                margin-top: 50px;
+                font-size: 25px;
+                position: relative;
+            }
+        }
+
         
         > .titre_presentation{
             position: relative;
@@ -79,8 +95,8 @@ $White: #FFFFFF;
             &::after{
                 content: "Qui suis-je?";
                 position: absolute;
-                font-size: 35px;
-                bottom: -15px;
+                font-size: 40px;
+                bottom: -25px;
                 left: 22%;
                 color: orange;
                 padding: 0 10px 5px 10px;
@@ -91,9 +107,9 @@ $White: #FFFFFF;
             }
         }
 
-        > .titre_coord{
+        > .titre_info{
             position: relative;
-            margin-bottom: 200px;
+            margin-top: 900px;
 
             &::before{
                 content: "";
@@ -108,10 +124,10 @@ $White: #FFFFFF;
             }
 
             &::after{
-                content: "Mes Coordonnées";
+                content: "Mes Informations";
                 position: absolute;
-                font-size: 35px;
-                bottom: -15px;
+                font-size: 40px;
+                bottom: -20px;
                 left: 22%;
                 color: orange;
                 padding: 0 10px 0 10px;
@@ -127,8 +143,10 @@ $White: #FFFFFF;
             display: flex;
             padding: 120px 0 80px 0;
             margin-bottom: 50px;
+            position: relative;
 
             .presentation{
+                position: absolute;
                 margin : auto 0 auto 100px;
                 padding: 20px;
                 width: 100%;
@@ -136,11 +154,16 @@ $White: #FFFFFF;
                 flex-direction: column;
                 background-color: orange;
                 border-radius: 5px;
-                
+                border: 3px solid $Darky;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+                &:hover {
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                }
                 
                 .btn{
                     display: flex;
-                    text-align: center;
                     margin: 50px auto 0 auto;
 
                     &_txt{
@@ -163,6 +186,9 @@ $White: #FFFFFF;
 
             .imgProfil{
                 margin : auto 0 auto 0;
+                position: absolute;
+                top: 450px;
+                z-index: 1;
 
                 img{
                     height: 400px;
@@ -172,7 +198,7 @@ $White: #FFFFFF;
             }
         }
 
-        .section_coord{
+        .section_info{
 
             position: relative;
 
@@ -182,20 +208,30 @@ $White: #FFFFFF;
                 height: 400px;
                 width: 400px;
                 position: absolute;
-                right: 0%;
-                top: -50%;
+                right: 0;
+                top: -400px;
                 transform: rotateZ(-10deg);
             }
 
-            .coord{
+            .info{
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 max-width: 1000px;
                 font-size: 1.3rem;
                 line-height: 40px;
-                border-left: $border;
                 border-radius: 10px;
-                padding-left: 50px;
+                padding: 50px;
+                position: relative;
+                top: 120px;
+                border: 3px solid orange;
+                background-color: $Medium;
+                color: $White;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+                &:hover {
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                }
     
                 > div{
                     display: flex;
@@ -236,7 +272,7 @@ $White: #FFFFFF;
 
         position: relative;
         height: 100%;
-        margin-top: 350px;
+        margin-top: 300px;
 
         > .titre_parcours{
             position: relative;
@@ -258,8 +294,8 @@ $White: #FFFFFF;
             &::after{
                 content: "Mon Parcours";
                 position: absolute;
-                font-size: 35px;
-                bottom: -15px;
+                font-size: 40px;
+                bottom: -20px;
                 left: 22%;
                 color: orange;
                 padding: 0 10px 0 10px;
@@ -342,3 +378,4 @@ $White: #FFFFFF;
         }
     }
 }
+

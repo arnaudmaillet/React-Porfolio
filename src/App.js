@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Accueil from './pages/Accueil.js';
 import Profil from './pages/Profil/Profil.js';
 import Projets from './pages/Projets.js';
-import Formations from './pages/Formations.js';
+import Formations from './pages/Formations/Formations';
 
 const App = () => {
   return (
