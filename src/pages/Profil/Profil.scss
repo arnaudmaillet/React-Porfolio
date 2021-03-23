@@ -59,8 +59,9 @@ $White: #FFFFFF;
 
         > .titre_presentation2{
 
+            text-align: center;
+
             > h1{
-                text-align: center;
                 color: $Darky;
                 margin-top: 200px;
                 font-size: 50px;
@@ -68,7 +69,6 @@ $White: #FFFFFF;
             }
 
             > p{
-                text-align: center;
                 margin-top: 50px;
                 font-size: 25px;
                 position: relative;
