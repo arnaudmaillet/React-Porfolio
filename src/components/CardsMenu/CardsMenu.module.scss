@@ -25,17 +25,17 @@
                 opacity: 1;
                 top: 70%;
                 left: 40%;
-                transition: 0.5s;
+                transition: .2s;
             }
 
             .sous_menu{
                 position: absolute;
                 opacity: 0;
                 top: 40%;
-                transition: 0.5s;
+                transition: .2s;
 
                 div{
-                    transition: 0.5s;
+                    transition: .2s;
                     color: white;
 
                     &:hover{

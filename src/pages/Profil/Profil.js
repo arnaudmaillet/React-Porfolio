@@ -57,7 +57,7 @@ const Profil = () => {
                     <TimeLine date="2021" titre="AAA"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, at modi eaque quam earum dolorum sint aspernatur. Et deserunt libero earum. Omnis tempora corporis animi accusamus, enim voluptate dolores error.</TimeLine>
                 </div>
             </div>
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     );
 };

@@ -47,17 +47,33 @@ $gray-light: #b0bec5;
     }
 
     &_container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 200px;
 
+        > img{
+            top: 0;
+            left: 0;
+            height: 600px;
+            clip-path: circle(30% at 50% 50%);
+            position: absolute;
+            z-index: -1;
+        }
 
         &_titre{
-
             text-align: center;
-            margin-top: 200px;
+            background-color: grey;
+            padding: 20px;
+            width: 1000px;
+            margin: 0 auto 0 auto;
+            
 
             > h1{
                 color: $Darky;
                 font-size: 50px;
                 font-weight: bold;
+                
             }
 
             > p{
@@ -74,14 +90,18 @@ $gray-light: #b0bec5;
             row-gap: 50px;
             margin-top: 150px;
 
-            > .container {
+
+            > div{
+                display: flex;
+            }
+    
+             .container {
                 cursor: pointer;
                 text-align: center;
                 border-radius: 10px;
                 position: relative;
                 width: 280px;
-                margin-bottom: 1rem;
-                margin-left: 1rem;
+                margin: auto;
                 border: 3px solid orange;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
                 transition: all 0.3s cubic-bezier(.25,.8,.25,1);
